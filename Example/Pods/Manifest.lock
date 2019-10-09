@@ -1,0 +1,69 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - MJExtension (3.1.0)
+  - SDWebImage (5.1.0):
+    - SDWebImage/Core (= 5.1.0)
+  - SDWebImage/Core (5.1.0)
+  - SVProgressHUD (2.2.5)
+  - WFBasics (0.2.5):
+    - AFNetworking
+    - SVProgressHUD
+    - WYAutoLayout
+  - WFBusSchool (0.1.0):
+    - MJExtension
+    - SDWebImage
+    - WFBasics
+    - WFKitMain
+    - WKFunComponents
+  - WFKitMain (0.1.6):
+    - WFBasics
+  - WKFunComponents (0.1.0)
+  - WYAutoLayout (1.0.1)
+
+DEPENDENCIES:
+  - WFBusSchool (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - MJExtension
+    - SDWebImage
+    - SVProgressHUD
+    - WYAutoLayout
+  https://github.com/WyICSP/WFSpecs.git:
+    - WFBasics
+    - WFKitMain
+    - WKFunComponents
+
+EXTERNAL SOURCES:
+  WFBusSchool:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
+  SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  WFBasics: 8080166577974ed22ec1b3d43c2835eac09de89b
+  WFBusSchool: ee6d756da8fdd49c2db219d41e76416572f8e061
+  WFKitMain: 848dc7678e716b4d84b62270b81dfb9ddf51a6e4
+  WKFunComponents: a4cde3e92b1c5841be91a9eefd7968c8ce903f73
+  WYAutoLayout: 3cb136ddc2efa9faaecf15876e6a9b2a6fd7c6cb
+
+PODFILE CHECKSUM: 0d2b8a26c728d487ddd64763c7fbc54afde0ee28
+
+COCOAPODS: 1.7.3

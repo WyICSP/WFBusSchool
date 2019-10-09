@@ -1,0 +1,6 @@
+framework module WFBusSchool {
+  umbrella header "WFBusSchool-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WFSecondBusCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7v9-jG-wRZ">
+                        <rect key="frame" x="15" y="0.0" width="34" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WFBusSchool.bundle/itemSchool" translatesAutoresizingMaskIntoConstraints="NO" id="NYO-Cb-Tk1">
+                        <rect key="frame" x="15" y="21" width="16.5" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16.5" id="I0H-Xa-xtM"/>
+                            <constraint firstAttribute="height" constant="18" id="qQQ-1u-GV1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRG-zN-Pcy">
+                        <rect key="frame" x="15" y="49.5" width="360" height="0.5"/>
+                        <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="lha-he-PzG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充电桩安装流程.pdf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M20-fA-MjH">
+                        <rect key="frame" x="43.5" y="21.5" width="321.5" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="M20-fA-MjH" firstAttribute="leading" secondItem="NYO-Cb-Tk1" secondAttribute="trailing" constant="12" id="5T9-QE-e83"/>
+                <constraint firstItem="M20-fA-MjH" firstAttribute="centerY" secondItem="NYO-Cb-Tk1" secondAttribute="centerY" id="8kM-db-HOS"/>
+                <constraint firstItem="NYO-Cb-Tk1" firstAttribute="leading" secondItem="7v9-jG-wRZ" secondAttribute="leading" id="C1R-Xh-NGk"/>
+                <constraint firstAttribute="bottom" secondItem="VRG-zN-Pcy" secondAttribute="bottom" id="VgY-zK-Vh0"/>
+                <constraint firstItem="VRG-zN-Pcy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="eCM-zD-KnV"/>
+                <constraint firstItem="7v9-jG-wRZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fwc-oU-NOS"/>
+                <constraint firstAttribute="trailing" secondItem="M20-fA-MjH" secondAttribute="trailing" constant="10" id="hQi-ui-0o3"/>
+                <constraint firstAttribute="trailing" secondItem="VRG-zN-Pcy" secondAttribute="trailing" id="htp-fu-b2D"/>
+                <constraint firstItem="NYO-Cb-Tk1" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="5" id="qDI-hh-8yd"/>
+                <constraint firstItem="7v9-jG-wRZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="seG-bm-Ym7"/>
+                <constraint firstItem="7v9-jG-wRZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wHo-BT-GI5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <connections>
+                <outlet property="time" destination="7v9-jG-wRZ" id="HQb-gd-n6g"/>
+                <outlet property="title" destination="M20-fA-MjH" id="jvi-96-hJs"/>
+            </connections>
+            <point key="canvasLocation" x="-123.91304347826087" y="93.75"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="WFBusSchool.bundle/itemSchool" width="16" height="16"/>
+    </resources>
+</document>

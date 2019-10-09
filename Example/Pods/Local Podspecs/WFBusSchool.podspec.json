@@ -1,0 +1,44 @@
+{
+  "name": "WFBusSchool",
+  "version": "0.1.0",
+  "summary": "WFBusSchool商学院",
+  "description": "'WFBusSchool合作版商学院组件'",
+  "homepage": "https://github.com/WyICSP/WFBusSchool",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "wyxlh": "wy_wangyu163@163.com"
+  },
+  "source": {
+    "git": "https://github.com/WyICSP/WFBusSchool.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "WFBusSchool/Classes/**/*",
+  "resource_bundles": {
+    "WFBusSchool": [
+      "WFBusSchool/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "WFBasics": [
+
+    ],
+    "WFKitMain": [
+
+    ],
+    "WKFunComponents": [
+
+    ],
+    "MJExtension": [
+
+    ],
+    "SDWebImage": [
+
+    ]
+  }
+}
