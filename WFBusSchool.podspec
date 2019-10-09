@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-'WFBusSchool合作版商学院组件'
+WFBusSchool合作版商学院组件,合伙人使用
                        DESC
 
   s.homepage         = 'https://github.com/WyICSP/WFBusSchool'
