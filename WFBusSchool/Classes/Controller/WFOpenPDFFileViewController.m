@@ -7,10 +7,15 @@
 //
 
 #import "WFOpenPDFFileViewController.h"
+#import "YukiWebProgressLayer.h"
+
 #import "WKHelp.h"
 
 @interface WFOpenPDFFileViewController ()<WKNavigationDelegate,WKUIDelegate>
-
+/**
+ 进度条
+ */
+@property (nonatomic, strong) YukiWebProgressLayer *webProgressLayer;
 @end
 
 @implementation WFOpenPDFFileViewController
@@ -84,9 +89,7 @@
     {
         [self dismissViewControllerAnimated:YES completion:nil];
     }
-    
 }
-
 
 - (void)dealloc {
     [self.webProgressLayer closeTimer];

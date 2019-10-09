@@ -8,15 +8,10 @@
 
 #import <WFKitMain/YFBaseViewController.h>
 #import <WebKit/WebKit.h>
-#import "YukiWebProgressLayer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WFOpenPDFFileViewController : YFBaseViewController
-/**
- 进度条
- */
-@property (nonatomic, strong) YukiWebProgressLayer *webProgressLayer;
 /**
  webView
  */
@@ -24,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  网址链接
  */
-@property (nonatomic, copy)   NSString  *urlString;
+@property (nonatomic, copy) NSString  *urlString;
 /**
  进度条颜色 默认为橙色
  */
