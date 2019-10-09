@@ -7,15 +7,10 @@
 //
 
 #import <WFKitMain/YFBaseViewController.h>
-#import <WebKit/WebKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WFOpenPDFFileViewController : YFBaseViewController
-/**
- webView
- */
-@property (nonatomic, strong) WKWebView *webView;
 /**
  网址链接
  */
@@ -23,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  进度条颜色 默认为橙色
  */
-@property (nonatomic, strong) UIColor   *progressColor;
+@property (nonatomic, strong) UIColor *progressColor;
 @end
 
 NS_ASSUME_NONNULL_END

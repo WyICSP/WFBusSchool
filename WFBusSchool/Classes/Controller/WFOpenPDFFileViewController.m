@@ -8,10 +8,15 @@
 
 #import "WFOpenPDFFileViewController.h"
 #import "YukiWebProgressLayer.h"
+#import <WebKit/WebKit.h>
 
 #import "WKHelp.h"
 
 @interface WFOpenPDFFileViewController ()<WKNavigationDelegate,WKUIDelegate>
+/**
+ webView
+ */
+@property (nonatomic, strong) WKWebView *webView;
 /**
  进度条
  */
