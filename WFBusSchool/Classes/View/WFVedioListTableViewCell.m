@@ -42,7 +42,7 @@ static NSString *const cellId = @"WFVedioListTableViewCell";
     NSString *defaultImgPath = [NSString getImagePathWithCurrentBundler:currentBundler PhotoName:@"fileImg" bundlerName:@"WFBusSchool.bundle"];
     [self.imgView sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:[UIImage imageWithContentsOfFile:defaultImgPath]];
     self.title.text = model.name;
-    self.time.text = model.name;
+    self.time.text = model.time;
 }
 
 @end

@@ -11,36 +11,37 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WFVedioItemCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uPQ-6L-Tus">
-                        <rect key="frame" x="15" y="8" width="103" height="56"/>
+                        <rect key="frame" x="15" y="30.5" width="103" height="58.5"/>
+                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="103" id="lCU-TB-LTn"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充电桩安装流程.pdf" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSg-fE-QQ1">
-                        <rect key="frame" x="128" y="8" width="232" height="17"/>
+                        <rect key="frame" x="128" y="51.5" width="232" height="17"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-08-27 07:48" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpu-sf-QW1">
-                        <rect key="frame" x="128" y="47" width="105.5" height="14.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAv-5M-iiN">
-                        <rect key="frame" x="15" y="71.5" width="360" height="0.5"/>
+                        <rect key="frame" x="15" y="97.5" width="360" height="0.5"/>
                         <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="DgH-Zx-A1B"/>
                         </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-08-27 07:48" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpu-sf-QW1">
+                        <rect key="frame" x="15" y="8" width="105.5" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -50,16 +51,16 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="uPQ-6L-Tus" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="3TQ-ad-9nu"/>
-                <constraint firstItem="uPQ-6L-Tus" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="8EA-uc-LzT"/>
+                <constraint firstItem="uPQ-6L-Tus" firstAttribute="top" secondItem="Mpu-sf-QW1" secondAttribute="bottom" constant="8" id="BV4-Te-16g"/>
+                <constraint firstItem="Mpu-sf-QW1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="Ey3-Ra-PjG"/>
+                <constraint firstItem="Mpu-sf-QW1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="PrW-f5-Dlw"/>
                 <constraint firstItem="sAv-5M-iiN" firstAttribute="leading" secondItem="uPQ-6L-Tus" secondAttribute="leading" id="Szd-6I-yZv"/>
                 <constraint firstAttribute="trailing" secondItem="RSg-fE-QQ1" secondAttribute="trailing" constant="15" id="V0U-KR-O7D"/>
-                <constraint firstItem="sAv-5M-iiN" firstAttribute="top" secondItem="Mpu-sf-QW1" secondAttribute="bottom" constant="10" id="ZdJ-4c-SDm"/>
-                <constraint firstAttribute="bottom" secondItem="uPQ-6L-Tus" secondAttribute="bottom" constant="8" id="cFy-cy-Oy8"/>
-                <constraint firstItem="RSg-fE-QQ1" firstAttribute="top" secondItem="uPQ-6L-Tus" secondAttribute="top" id="dcq-KQ-kuu"/>
+                <constraint firstAttribute="bottom" secondItem="uPQ-6L-Tus" secondAttribute="bottom" constant="9" id="cFy-cy-Oy8"/>
                 <constraint firstItem="RSg-fE-QQ1" firstAttribute="leading" secondItem="uPQ-6L-Tus" secondAttribute="trailing" constant="10" id="eVE-NM-klE"/>
                 <constraint firstAttribute="trailing" secondItem="sAv-5M-iiN" secondAttribute="trailing" id="edX-7m-bna"/>
                 <constraint firstAttribute="bottom" secondItem="sAv-5M-iiN" secondAttribute="bottom" id="hLK-3P-pdJ"/>
-                <constraint firstItem="Mpu-sf-QW1" firstAttribute="leading" secondItem="RSg-fE-QQ1" secondAttribute="leading" id="kcJ-6Z-TP6"/>
+                <constraint firstItem="RSg-fE-QQ1" firstAttribute="centerY" secondItem="uPQ-6L-Tus" secondAttribute="centerY" id="vE1-jL-6xH"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <connections>
@@ -67,7 +68,7 @@
                 <outlet property="time" destination="Mpu-sf-QW1" id="biD-Gd-skF"/>
                 <outlet property="title" destination="RSg-fE-QQ1" id="b7b-05-Xy3"/>
             </connections>
-            <point key="canvasLocation" x="136.95652173913044" y="110.49107142857143"/>
+            <point key="canvasLocation" x="-38.405797101449281" y="97.767857142857139"/>
         </collectionViewCell>
     </objects>
 </document>

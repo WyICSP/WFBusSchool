@@ -13,6 +13,7 @@
 #import "WFBusSchoolDataTool.h"
 #import "WFBusSchoolFileListModel.h"
 #import "WFBusSchoolHistoryModel.h"
+#import "NSString+Regular.h"
 #import "SKSafeObject.h"
 #import "WKHelp.h"
 
@@ -78,7 +79,7 @@
 - (NSMutableArray *)itemArrayWithModel:(WFBusSchoolFileListModel *)model {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    [dict safeSetObject:model.time forKey:@"time"];
+    [dict safeSetObject:[NSString getCurrentDate:[NSDate date]] forKey:@"time"];
     [dict safeSetObject:model.name forKey:@"name"];
     [dict safeSetObject:model.url forKey:@"url"];
     [dict safeSetObject:model.image forKey:@"image"];

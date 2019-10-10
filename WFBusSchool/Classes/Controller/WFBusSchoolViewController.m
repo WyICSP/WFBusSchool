@@ -81,7 +81,7 @@
         return CGSizeMake((ScreenWidth-40.0f)/2, KHeight(80.0f));
     }
     WFBusSchoolFileListModel *itemModle = self.histroyArray[indexPath.row];
-    return CGSizeMake(ScreenWidth, itemModle.type == 1 ? 55.0f : 72.0f);
+    return CGSizeMake(ScreenWidth, itemModle.type == 1 ? 55.0f : 98.0f);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
@@ -90,6 +90,14 @@
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return section == 0 ? UIEdgeInsetsMake(0, 15.0f, 0, 15.0f) : UIEdgeInsetsZero;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return section == 0 ? 10.0f : CGFLOAT_MIN;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return CGFLOAT_MIN;
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {

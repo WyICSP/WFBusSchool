@@ -35,7 +35,7 @@ static NSString *const cellId = @"WFVedioItemCollectionViewCell";
     NSString *btnImgPath = [NSString getImagePathWithCurrentBundler:currentBundler PhotoName:@"fileImg" bundlerName:@"WFBusSchool.bundle"];
     [self.imgView sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:[UIImage imageWithContentsOfFile:btnImgPath]];
     self.title.text = model.name;
-    self.time.text = model.name;
+    self.time.text = model.time;
 }
 
 @end
