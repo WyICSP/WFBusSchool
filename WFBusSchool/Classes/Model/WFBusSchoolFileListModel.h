@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *image;
 /// 类型 1 pdf 0 视频
 @property (nonatomic, assign) NSInteger type;
+
+@property (nonatomic, copy) NSString *Id;
 @end
 
 NS_ASSUME_NONNULL_END

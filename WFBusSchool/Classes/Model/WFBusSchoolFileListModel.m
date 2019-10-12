@@ -7,7 +7,12 @@
 //
 
 #import "WFBusSchoolFileListModel.h"
+#import <MJExtension/MJExtension.h>
 
 @implementation WFBusSchoolFileListModel
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    return @{@"Id":@"id"};
+}
 
 @end

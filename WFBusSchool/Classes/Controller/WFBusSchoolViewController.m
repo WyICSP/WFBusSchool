@@ -81,7 +81,7 @@
         return CGSizeMake((ScreenWidth-40.0f)/2, KHeight(80.0f));
     }
     WFBusSchoolFileListModel *itemModle = self.histroyArray[indexPath.row];
-    return CGSizeMake(ScreenWidth, itemModle.type == 1 ? 55.0f : 98.0f);
+    return CGSizeMake(ScreenWidth, itemModle.type == 1 ? 60.0f : 98.0f);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {

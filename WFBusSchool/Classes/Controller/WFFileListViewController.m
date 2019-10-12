@@ -84,6 +84,7 @@
     [dict safeSetObject:model.url forKey:@"url"];
     [dict safeSetObject:model.image forKey:@"image"];
     [dict safeSetObject:@(model.type) forKey:@"type"];
+    [dict safeSetObject:model.Id forKey:@"Id"];
     [array addObject:dict];
     return array;
 }

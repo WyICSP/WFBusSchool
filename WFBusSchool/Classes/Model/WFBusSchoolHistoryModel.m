@@ -9,6 +9,11 @@
 #import "WFBusSchoolHistoryModel.h"
 #import "WKHelp.h"
 
+@interface WFBusSchoolHistoryModel ()
+/// 重复数据的下标
+@property (nonatomic, assign) NSInteger index;
+@end
+
 @implementation WFBusSchoolHistoryModel
 
 + (instancetype)shareInstance {
@@ -27,21 +32,24 @@
  */
 #pragma  mark -
 - (void)saveData:(NSMutableArray *)searchArray {
+    if (searchArray.count == 0) return;
     
     NSMutableArray *array = [NSMutableArray arrayWithArray:[self readData]];
-    [array insertObjects:searchArray atIndexes:[NSIndexSet indexSetWithIndex:0]];
-    //过滤重复数据
-    NSMutableArray *categoryArray = [[NSMutableArray alloc] init];
-    for (unsigned i = 0; i < [array count]; i++){
-        if ([categoryArray containsObject:[array objectAtIndex:i]] == NO){
-            [categoryArray addObject:[array objectAtIndex:i]];
-        }
+    
+    if (![self isIdenticalWithItemArray:searchArray]) {
+        //如果没有就直接添加
+        [array insertObjects:searchArray atIndexes:[NSIndexSet indexSetWithIndex:0]];
+    }else {
+        //移除之前的添加最新的
+        [array removeObjectAtIndex:self.index];
+        [array insertObjects:searchArray atIndexes:[NSIndexSet indexSetWithIndex:0]];
     }
-    if (categoryArray.count > 10) {
-        [categoryArray removeLastObject];
+
+    if (array.count > 10) {
+        [array removeLastObject];
     }
     //序列化
-    NSData  *jsonData = [NSJSONSerialization dataWithJSONObject:categoryArray options:NSJSONWritingPrettyPrinted error:nil];
+    NSData  *jsonData = [NSJSONSerialization dataWithJSONObject:array options:NSJSONWritingPrettyPrinted error:nil];
     NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     [YFUserDefaults setObject:jsonStr forKey:@"RecordHistoryArray"];
     [YFUserDefaults synchronize];
@@ -67,6 +75,32 @@
         array = [[NSMutableArray alloc] init];
     }
     return array;
+}
+
+/// 判断是否有相同数据
+/// @param itemArray 传入的数据
+- (BOOL)isIdenticalWithItemArray:(NSArray *)itemArray {
+    NSMutableArray *array = [NSMutableArray arrayWithArray:[self readData]];
+    NSMutableArray *IdArray = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary *dict in array) {
+        NSString *Id = [NSString stringWithFormat:@"%@",[dict objectForKey:@"Id"]];
+        [IdArray addObject:Id];
+    }
+    
+    NSDictionary *itemDic = [itemArray firstObject];
+    NSString *itemId = [NSString stringWithFormat:@"%@",[itemDic objectForKey:@"Id"]];
+    
+    for (int i = 0; i < IdArray.count; i ++) {
+        if ([itemId isEqualToString:[IdArray objectAtIndex:i]]) {
+            self.index = i;
+        }
+    }
+    if ([IdArray containsObject:itemId] == NO) {
+        return NO;
+    }
+    return YES;
+    
 }
 
 /**
