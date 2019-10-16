@@ -34,7 +34,7 @@
 
 #pragma mark 私有方法
 - (void)setUI {
-    self.title = @"文档";
+    self.title = self.fileType == WFBusSchoolPSFFileType ? @"文档" : @"视频";
     [self getFileData];
 }
 
