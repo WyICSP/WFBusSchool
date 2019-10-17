@@ -39,7 +39,7 @@ static NSString *const cellId = @"WFVedioListTableViewCell";
 - (void)setModel:(WFBusSchoolFileListModel *)model {
     //当前文件的 bundle
     NSBundle *currentBundler = [NSBundle bundleForClass:[self class]];
-    NSString *defaultImgPath = [NSString getImagePathWithCurrentBundler:currentBundler PhotoName:@"fileImg" bundlerName:@"WFBusSchool.bundle"];
+    NSString *defaultImgPath = [NSString getImagePathWithCurrentBundler:currentBundler PhotoName:@"vedioChang" bundlerName:@"WFBusSchool.bundle"];
     [self.imgView sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:[UIImage imageWithContentsOfFile:defaultImgPath]];
     self.title.text = model.name;
     self.time.text = model.time;

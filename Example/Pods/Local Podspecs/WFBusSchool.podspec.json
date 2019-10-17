@@ -1,6 +1,6 @@
 {
   "name": "WFBusSchool",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "summary": "WFBusSchool商学院",
   "description": "WFBusSchool合作版商学院组件,合伙人使用",
   "homepage": "https://github.com/WyICSP/WFBusSchool",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/WyICSP/WFBusSchool.git",
-    "tag": "0.1.3"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "9.0"
