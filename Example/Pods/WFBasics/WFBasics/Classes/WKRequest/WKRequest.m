@@ -266,8 +266,8 @@
     [manager.requestSerializer setValue:[NSString getCurrentDeviceModel] forHTTPHeaderField:@"osInformation"];
     [manager.requestSerializer setValue:@"iOS" forHTTPHeaderField:@"plat"];
     [manager.requestSerializer setValue:timestamp forHTTPHeaderField:@"timestamp"];
-    [manager.requestSerializer setValue:[UserData userInfo].uuid forHTTPHeaderField:@"userId"];
-    [manager.requestSerializer setValue:[UserData userInfo].uuid forHTTPHeaderField:@"uuid"];
+    [manager.requestSerializer setValue:@"a791829cdcc74f38942445dd6f2ed855" forHTTPHeaderField:@"userId"];
+    [manager.requestSerializer setValue:@"a791829cdcc74f38942445dd6f2ed855" forHTTPHeaderField:@"uuid"];
     [manager.requestSerializer setValue:@"1.0.0" forHTTPHeaderField:@"version"];
     
     return manager;

@@ -6,8 +6,10 @@
 //
 
 #import <WFKitMain/YFBaseViewController.h>
+//#import "WFWebProgressLayer.h"
 #import <WebKit/WebKit.h>
-#import "WFWebProgressLayer.h"
+#import <dsbridge/dsbridge.h>
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,19 +17,22 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  进度条
  */
-@property (nonatomic, strong) WFWebProgressLayer *webProgressLayer;
+//@property (nonatomic, strong) WFWebProgressLayer *webProgressLayer;
 /**
  webView
  */
-@property (nonatomic, strong) WKWebView *webView;
+@property (nonatomic, strong) DWKWebView * dwebview;
 /**
  网址链接
  */
-@property (nonatomic, copy)   NSString  *urlString;
+@property (nonatomic, copy) NSString  *urlString;
 /**
  进度条颜色
  */
 @property (nonatomic, strong) UIColor   *progressColor;
+
+/// 清空缓存
+- (void)deleteWebCache;
 
 @end
 

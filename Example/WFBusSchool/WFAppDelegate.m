@@ -9,6 +9,7 @@
 #import "WFAppDelegate.h"
 #import "YFMediatorManager+YFKitMain.h"
 #import "WFBusSchoolViewController.h"
+#import "WFPersonCenterViewController.h"
 #import "WFViewController.h"
 #import "WKHelp.h"
 
@@ -65,8 +66,8 @@
 //    NSString *currentVersion                 = [NSString getAppVersion];
         //如果没有登录
             UITabBarController *rootVC        = [YFMediatorManager rootTabBarCcontroller];
-            [YFMediatorManager addChildVC:[WFBusSchoolViewController new] normalImageName:@"videoImg" selectedImageName:@"videoImg" title:@"商城"];
-            [YFMediatorManager addChildVC:[WFViewController new] normalImageName:@"videoImg" selectedImageName:@"videoImg" title:@"我的片区"];
+            [YFMediatorManager addChildVC:[WFPersonCenterViewController new] normalImageName:@"videoImg" selectedImageName:@"videoImg" title:@"商城"];
+            [YFMediatorManager addChildVC:[WFBusSchoolViewController new] normalImageName:@"videoImg" selectedImageName:@"videoImg" title:@"我的"];
             [YFMediatorManager setGlobalBackGroundColor:[UIColor whiteColor]];
             [YFMediatorManager setNarBarGlobalTextColor:[UIColor blackColor] andFontSize:18];
             

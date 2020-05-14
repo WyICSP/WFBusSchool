@@ -16,6 +16,9 @@
 #import "WFBusSchoolFileListModel.h"
 #import <MJExtension/MJExtension.h>
 #import "WFOpenPDFFileViewController.h"
+#import "WFQusCollectionViewCell.h"
+#import "WFSchoolWebViewController.h"
+#import "WKSetting.h"
 #import "WKHelp.h"
 
 @interface WFBusSchoolViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
@@ -23,6 +26,8 @@
 @property (nonatomic, strong, nullable) UICollectionView *collectionView;
 /// 历史数据
 @property (nonatomic, strong, nullable) NSMutableArray <WFBusSchoolFileListModel *> *histroyArray;
+///是否可以侧滑
+@property (nonatomic,assign) BOOL isCanSideBack;
 @end
 
 @implementation WFBusSchoolViewController
@@ -35,10 +40,24 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self disableSideBack];
     //历史数据
     self.histroyArray = [WFBusSchoolFileListModel mj_objectArrayWithKeyValuesArray:[[WFBusSchoolHistoryModel shareInstance] readData]];
     
     [self.collectionView reloadData];
+}
+
+///禁用侧滑返回
+- (void)disableSideBack{
+    self.isCanSideBack = NO;
+    if([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
+    }
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer*)gestureRecognizer {
+    return self.isCanSideBack;
 }
 
 #pragma mark 私有方法
@@ -48,11 +67,11 @@
 
 #pragma mark UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return self.histroyArray.count == 0 ? 1 : 2;
+    return self.histroyArray.count == 0 ? 2 : 3;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return section == 0 ? 2 : self.histroyArray.count;
+    return section == 0 ? 2 : (section == 1 ? 1 : self.histroyArray.count);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -61,7 +80,10 @@
         WFFirstBusCollectionViewCell *cell = [WFFirstBusCollectionViewCell cellWithCollectionView:collectionView indexPath:indexPath];
         [cell bindCellWithIndexPath:indexPath];
         return cell;
-    }else{
+    }else if (indexPath.section == 1) {
+        WFQusCollectionViewCell *cell = [WFQusCollectionViewCell cellWithCollectionView:collectionView indexPath:indexPath];
+        return cell;
+    } else {
         WFBusSchoolFileListModel *itemModle = self.histroyArray[indexPath.row];
         if (itemModle.type == 0) {
             // 视频
@@ -79,13 +101,15 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         return CGSizeMake((ScreenWidth-40.0f)/2, KHeight(80.0f));
+    } else if (indexPath.section == 1) {
+        return CGSizeMake(ScreenWidth, 55.0f);
     }
     WFBusSchoolFileListModel *itemModle = self.histroyArray[indexPath.row];
     return CGSizeMake(ScreenWidth, itemModle.type == 1 ? 60.0f : 98.0f);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-    return CGSizeMake(ScreenWidth, KHeight(54.0f));
+    return section == 1 ? CGSizeMake(ScreenWidth, 30.0f) : CGSizeMake(ScreenWidth, KHeight(54.0f));
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
@@ -103,7 +127,7 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if (kind == UICollectionElementKindSectionHeader) {
         WFBusSchoolCollectionReusableView *reusableView = [WFBusSchoolCollectionReusableView reusableViewWithCollectionView:collectionView indexPath:indexPath];
-        reusableView.title.text = indexPath.section == 0 ? @"常用服务" : @"最近";
+        reusableView.title.text = indexPath.section == 0 ? @"常用服务" : (indexPath.section == 2 ? @"最近" : @"");
         return reusableView;
     }
     return [UICollectionReusableView new];
@@ -115,7 +139,7 @@
         file.hidesBottomBarWhenPushed = YES;
         file.fileType = indexPath.row == 0 ? WFBusSchoolPSFFileType : WFBusSchoolVedioFileType;
         [self.navigationController pushViewController:file animated:YES];
-    }else if (indexPath.section == 1) {
+    }else if (indexPath.section == 2) {
         //查看视频文档
         WFBusSchoolFileListModel *itemModle = self.histroyArray[indexPath.row];
         WFOpenPDFFileViewController *pdfFile = [[WFOpenPDFFileViewController alloc] init];
@@ -123,6 +147,12 @@
         pdfFile.urlString = itemModle.url;
         pdfFile.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:pdfFile animated:YES];
+    }else {
+        // 问题反馈
+        WFSchoolWebViewController *web = [[WFSchoolWebViewController alloc] init];
+        web.urlString = [NSString stringWithFormat:@"%@yzc-app-partner/#/userInfo/feedBack",H5_HOST];
+        web.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:web animated:YES];
     }
 }
 
@@ -138,6 +168,7 @@
         [_collectionView registerNib:[UINib nibWithNibName:@"WFFirstBusCollectionViewCell" bundle:[NSBundle bundleForClass:[self class]]] forCellWithReuseIdentifier:@"WFFirstBusCollectionViewCell"];
         [_collectionView registerNib:[UINib nibWithNibName:@"WFSecondBusCollectionViewCell" bundle:[NSBundle bundleForClass:[self class]]] forCellWithReuseIdentifier:@"WFSecondBusCollectionViewCell"];
         [_collectionView registerNib:[UINib nibWithNibName:@"WFVedioItemCollectionViewCell" bundle:[NSBundle bundleForClass:[self class]]] forCellWithReuseIdentifier:@"WFVedioItemCollectionViewCell"];
+        [_collectionView registerNib:[UINib nibWithNibName:@"WFQusCollectionViewCell" bundle:[NSBundle bundleForClass:[self class]]] forCellWithReuseIdentifier:@"WFQusCollectionViewCell"];
         [_collectionView registerNib:[UINib nibWithNibName:@"WFBusSchoolCollectionReusableView" bundle:[NSBundle bundleForClass:[self class]]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"WFBusSchoolCollectionReusableView"];
         [self.view addSubview:_collectionView];
     }

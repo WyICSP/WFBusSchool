@@ -287,4 +287,21 @@
  */
 + (NSString *)getCurrentDeviceModel;
 
+
+/// 获取项目名 UTF-8 编码
++ (NSString *)getProjectName;
+
+
+/// APP 名字
++ (NSString *)getAppName;
+
+/// 向上 四舍五入
+/// @param price 数字
+/// @param position 保留的小数位数
++ (NSString *)rounding:(double)price afterPoint:(int)position;
+
+/// 处理精度缺失问题
+/// @param conversionValue 传入的 double 类型值
++ (NSString *)decimalNumberWithDouble:(double)conversionValue;
+
 @end
