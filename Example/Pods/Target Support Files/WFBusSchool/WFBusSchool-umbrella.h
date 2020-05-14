@@ -18,7 +18,6 @@
 #import "WFBusSchoolFileListModel.h"
 #import "WFBusSchoolHistoryModel.h"
 #import "WFSchoolJSApi.h"
-#import "WFUserCenterModel.h"
 #import "WFBusSchoolCollectionReusableView.h"
 #import "WFFileListTableViewCell.h"
 #import "WFFirstBusCollectionViewCell.h"

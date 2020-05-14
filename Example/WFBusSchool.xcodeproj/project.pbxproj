@@ -23,14 +23,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		88F267DF245014D800F7F024 /* WFPersonCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F267DE245014D800F7F024 /* WFPersonCenterViewController.m */; };
-		88F267E32450151F00F7F024 /* WFPersonCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F267E12450151F00F7F024 /* WFPersonCenterTableViewCell.m */; };
-		88F267E42450151F00F7F024 /* WFPersonCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F267E22450151F00F7F024 /* WFPersonCenterTableViewCell.xib */; };
-		88F267E72450155800F7F024 /* WFPersonHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F267E62450155800F7F024 /* WFPersonHeadView.m */; };
-		88F267E92450156200F7F024 /* WFPersonHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F267E82450156200F7F024 /* WFPersonHeadView.xib */; };
-		88F267F22450401900F7F024 /* MLMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F267EB2450401900F7F024 /* MLMenuItem.m */; };
-		88F267F32450401900F7F024 /* MLMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F267EC2450401900F7F024 /* MLMenuCell.m */; };
-		88F267F42450401900F7F024 /* MLMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F267ED2450401900F7F024 /* MLMenuView.m */; };
 		8CF006B8514741F90E9CF58E /* Pods_WFBusSchool_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2CC6F48596D8BE0CA80289 /* Pods_WFBusSchool_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,21 +65,6 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81C657EC6A8159D3805FA657 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		88F267DD245014D800F7F024 /* WFPersonCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFPersonCenterViewController.h; sourceTree = "<group>"; };
-		88F267DE245014D800F7F024 /* WFPersonCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFPersonCenterViewController.m; sourceTree = "<group>"; };
-		88F267E02450151F00F7F024 /* WFPersonCenterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFPersonCenterTableViewCell.h; sourceTree = "<group>"; };
-		88F267E12450151F00F7F024 /* WFPersonCenterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFPersonCenterTableViewCell.m; sourceTree = "<group>"; };
-		88F267E22450151F00F7F024 /* WFPersonCenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WFPersonCenterTableViewCell.xib; sourceTree = "<group>"; };
-		88F267E52450155700F7F024 /* WFPersonHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFPersonHeadView.h; sourceTree = "<group>"; };
-		88F267E62450155800F7F024 /* WFPersonHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFPersonHeadView.m; sourceTree = "<group>"; };
-		88F267E82450156200F7F024 /* WFPersonHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WFPersonHeadView.xib; sourceTree = "<group>"; };
-		88F267EB2450401900F7F024 /* MLMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMenuItem.m; sourceTree = "<group>"; };
-		88F267EC2450401900F7F024 /* MLMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMenuCell.m; sourceTree = "<group>"; };
-		88F267ED2450401900F7F024 /* MLMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMenuView.m; sourceTree = "<group>"; };
-		88F267EE2450401900F7F024 /* MLMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMenu.h; sourceTree = "<group>"; };
-		88F267EF2450401900F7F024 /* MLMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMenuCell.h; sourceTree = "<group>"; };
-		88F267F02450401900F7F024 /* MLMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMenuItem.h; sourceTree = "<group>"; };
-		88F267F12450401900F7F024 /* MLMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMenuView.h; sourceTree = "<group>"; };
 		8A469700E5FBBD7D14E2AD08 /* Pods-WFBusSchool_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WFBusSchool_Example.release.xcconfig"; path = "Target Support Files/Pods-WFBusSchool_Example/Pods-WFBusSchool_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F7EB0D3379C51553D1DD40D1 /* Pods-WFBusSchool_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WFBusSchool_Example.debug.xcconfig"; path = "Target Support Files/Pods-WFBusSchool_Example/Pods-WFBusSchool_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,8 +132,6 @@
 		6003F593195388D20070C39A /* Example for WFBusSchool */ = {
 			isa = PBXGroup;
 			children = (
-				88F267EA2450401900F7F024 /* WFMenu */,
-				88F267CE2450117B00F7F024 /* Mine */,
 				6003F59C195388D20070C39A /* WFAppDelegate.h */,
 				6003F59D195388D20070C39A /* WFAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -208,35 +183,6 @@
 				32310F032A5E9A740E60603D /* LICENSE */,
 			);
 			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		88F267CE2450117B00F7F024 /* Mine */ = {
-			isa = PBXGroup;
-			children = (
-				88F267DD245014D800F7F024 /* WFPersonCenterViewController.h */,
-				88F267DE245014D800F7F024 /* WFPersonCenterViewController.m */,
-				88F267E02450151F00F7F024 /* WFPersonCenterTableViewCell.h */,
-				88F267E12450151F00F7F024 /* WFPersonCenterTableViewCell.m */,
-				88F267E22450151F00F7F024 /* WFPersonCenterTableViewCell.xib */,
-				88F267E52450155700F7F024 /* WFPersonHeadView.h */,
-				88F267E62450155800F7F024 /* WFPersonHeadView.m */,
-				88F267E82450156200F7F024 /* WFPersonHeadView.xib */,
-			);
-			path = Mine;
-			sourceTree = "<group>";
-		};
-		88F267EA2450401900F7F024 /* WFMenu */ = {
-			isa = PBXGroup;
-			children = (
-				88F267EB2450401900F7F024 /* MLMenuItem.m */,
-				88F267EC2450401900F7F024 /* MLMenuCell.m */,
-				88F267ED2450401900F7F024 /* MLMenuView.m */,
-				88F267EE2450401900F7F024 /* MLMenu.h */,
-				88F267EF2450401900F7F024 /* MLMenuCell.h */,
-				88F267F02450401900F7F024 /* MLMenuItem.h */,
-				88F267F12450401900F7F024 /* MLMenuView.h */,
-			);
-			path = WFMenu;
 			sourceTree = "<group>";
 		};
 		A352BAEA2C9FF74E47B0FCFC /* Pods */ = {
@@ -333,8 +279,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88F267E92450156200F7F024 /* WFPersonHeadView.xib in Resources */,
-				88F267E42450151F00F7F024 /* WFPersonCenterTableViewCell.xib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
@@ -440,14 +384,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88F267E72450155800F7F024 /* WFPersonHeadView.m in Sources */,
-				88F267E32450151F00F7F024 /* WFPersonCenterTableViewCell.m in Sources */,
 				6003F59E195388D20070C39A /* WFAppDelegate.m in Sources */,
-				88F267F22450401900F7F024 /* MLMenuItem.m in Sources */,
-				88F267F42450401900F7F024 /* MLMenuView.m in Sources */,
 				6003F5A7195388D20070C39A /* WFViewController.m in Sources */,
-				88F267F32450401900F7F024 /* MLMenuCell.m in Sources */,
-				88F267DF245014D800F7F024 /* WFPersonCenterViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

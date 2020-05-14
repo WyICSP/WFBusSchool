@@ -24,7 +24,7 @@ PODS:
     - AFNetworking
     - SVProgressHUD
     - WYAutoLayout
-  - WFBusSchool (0.1.5):
+  - WFBusSchool (0.1.6):
     - MJExtension
     - SDWebImage
     - WFBasics
@@ -63,7 +63,7 @@ SPEC CHECKSUMS:
   SDWebImage: 7137d57385fb632129838c1e6ab9528a22c666cc
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   WFBasics: 14f06bb607c33d8d684bfa4af39a84945bdd8d2f
-  WFBusSchool: 17c19a6c735cfd872f83b947b058cf5870a7389f
+  WFBusSchool: 8794bb8bf9499c4af5ffd191c61df0ad114f2766
   WFKitMain: 9fa8a908105ce2f9ace575538ae280eef5a94fc6
   WKFunComponents: 359e5059c096338eee60fee1d7146b701ed30372
   WYAutoLayout: 3cb136ddc2efa9faaecf15876e6a9b2a6fd7c6cb
