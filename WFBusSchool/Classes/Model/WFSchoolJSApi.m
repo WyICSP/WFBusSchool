@@ -7,6 +7,7 @@
 
 #import "WFSchoolJSApi.h"
 #import "YFKeyWindow.h"
+#import "UserData.h"
 #import "dsbridge.h"
 
 @implementation WFSchoolJSApi
@@ -17,6 +18,11 @@
     [[[YFKeyWindow shareInstance] getCurrentVC].navigationController popViewControllerAnimated:YES];
     completionHandler(msg,YES);
     
+}
+
+- (void)getToken:(NSString *)msg :(JSCallback) completionHandler
+{
+    completionHandler([UserData userInfo].token,YES);
 }
 
 @end
