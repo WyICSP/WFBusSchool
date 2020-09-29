@@ -21,8 +21,8 @@
 + (void)getBusSchoolFileWithParams:(NSDictionary *)params
                        resultBlock:(void(^)(NSArray <WFBusSchoolFileListModel *> *models))resultBlock {
     //接口地址
-    NSString *path = [NSString stringWithFormat:@"%@yzsh-partner-apply/V1/commercial/getCommercialViewAndFile",NEW_HOST_URL];
-    [WKRequest getWithURLString:path parameters:params isShowHud:YES success:^(WKBaseModel *baseModel) {
+    NSString *path = [NSString stringWithFormat:@"%@app-partner/commercialTemplate/getCommercialViewAndFile",NEW_HOST_URL];
+    [WKRequest postWithURLString:path parameters:params isJson:YES isShowHud:YES success:^(WKBaseModel *baseModel) {
         if (CODE_ZERO) {
             resultBlock([WFBusSchoolFileListModel mj_objectArrayWithKeyValuesArray:baseModel.data]);
         }else {

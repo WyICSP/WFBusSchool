@@ -150,7 +150,7 @@
     }else {
         // 问题反馈
         WFSchoolWebViewController *web = [[WFSchoolWebViewController alloc] init];
-        web.urlString = [NSString stringWithFormat:@"%@yzsh-app-partner/#/userCenter/my/feedBack",H5_HOST];
+        web.urlString = [NSString stringWithFormat:@"%@yzc-app-partner/#/userInfo/feedBack",H5_HOST];
         web.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:web animated:YES];
     }
